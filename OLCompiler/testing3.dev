@@ -1,0 +1,24 @@
+/*
+THIS TEST INCLUDES MANY THINGS LIKE: VARIABLES, WRITING TO CONSOLE, SETTING A VARIABLE TO LOWERCASE, SETTING A VARIABLE TO UPPERCASE, AND JUMPING.
+*/
+
+//This variable should be uppercase by the end:
+$(ThisShouldEndAsUppercase) = "uppercase";
+
+//This variable should be lowercase by the end:
+$(ThisShouldEndAsLowercase) = "LOWERCASE";
+
+//Sets the variable to uppercase:
+$(ThisShouldEndAsUppercase).uppercase();
+
+//Sets the variable to lowercase:
+$(ThisShouldEndAsLowercase).lowercase();
+
+//Jump if variable is not uppercase:
+jump($(ThisShouldEndAsUppercase) != "UPPERCASE", 1);
+
+//Jump if variable is not lowercase:
+jump($(ThisShouldEndAsLowercase) != "lowercase", 1);
+
+//DISPLAY:
+cli.outline("Program finished!");

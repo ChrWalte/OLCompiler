@@ -1,0 +1,26 @@
+/*
+THIS TEST INCLUDES MANY THINGS LIKE: VARIABLES, WRITING TO CONSOLE, READING FROM CONSOLE, WRITING FROM A FILE, AND READING TO A FILE.
+*/
+
+//Variavle where the user input will be stored:
+$(TestFromUserThatWillBeWritenToFile) = "";
+
+//DISPLAY:
+cli.out("Please enter anything: ");
+
+//Grab user input from console and stores in variable:
+cli.in($(TestFromUserThatWillBeWritenToFile));
+
+//Writes the variable to file:b 
+file.write("./testing2.filesave.txt", $(TestFromUserThatWillBeWritenToFile));
+
+//Variable where the value of the file will be stored:
+$(ThisShouldBeEqualToUserInputAfterReadingAndWriting) = "";
+
+//Reads the value from file and stores it in the new variable:
+file.read("./testing2.filesave.txt", $(ThisShouldBeEqualToUserInputAfterReadingAndWriting));
+
+//DISPLAY:
+cli.out($(TestFromUserThatWillBeWritenToFile));
+cli.out(" == ");
+cli.outline($(ThisShouldBeEqualToUserInputAfterReadingAndWriting));

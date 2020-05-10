@@ -1,0 +1,23 @@
+/*
+THIS TEST INCLUDES MANY THINGS LIKE: VARIABLES, RANDOM NUMBERS, WRITING TO CONSOLE, READING FROM CONSOLE, AND JUMPING.
+*/
+
+// Variable for user input:
+$(UserInput) = "";
+
+//Variable for a random number:
+$(RandomNumber) = random.number(1000, 9999);
+
+//DISPLAY:
+cli.out("Please type in ");
+cli.out($(RandomNumber));
+cli.out(": ");
+
+//Gets user input from console:
+cli.in($(UserInput));
+
+//Checks if user input is equal to random number, if not jump to line 1;
+jump($(UserInput) != $(RandomNumber), 1);
+
+//DISPLAY
+cli.outline("Correct!");
